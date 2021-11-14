@@ -14,11 +14,10 @@ use counter to count occurences so it does not harm your performance speed
 
 
 import pandas as pd
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import glob
 from collections import Counter
-#import numpy as np
-#import seaborn as sns
+import numpy as np
 
 #1: Dùng Pandas đọc và tổng hợp dữ liệu của các năm
 folder_path = '/Users/hazel/Desktop/03 Python exercies_2021/Names'
@@ -55,7 +54,7 @@ print(main_dataframe)
 
 #=========================================================================================================
 
-"""
+
 listTotalF = []
 listTotalM = []
 index = []
@@ -74,7 +73,7 @@ for i in range(0,10):
 df = pd.DataFrame({'Female': listTotalF,
                     'Male': listTotalM}, index=index)
 ax = df.plot.bar(rot=0, color={"Female": "pink", "Male": "blue"})
-"""
+
 
 #3 Tạo subset gồm top 1000 cái tên phổ biến mỗi năm theo từng loại giới tính
 # unique names -> gender F ->  count in 1880, 1881, 1882, etc 
@@ -97,7 +96,7 @@ for i in range (0, 300):
     listNames.append(person)
     j = j + 1 
 
-#print(listNames)
+print(listNames)
 #count names based on years and genders. 
 #unique names - 1880 - Female 
 #unique names - 1880 - Male 
