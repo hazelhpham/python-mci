@@ -1,0 +1,28 @@
+# Giả sử bạn đang đứng ở tầng trệt (tầng 0) ở tòa nhà 100 tầng. Bạn có 1 con xúc sắc 6 mặt.
+# Bạn được đặt cược rằng nếu bạn đi được lên tầng 60 trở lên là bạn thắng. Cách đi như sau:
+# Nếu tung xúc sắc lên:
+# - Nếu mặt trên cho ra số chấm tròn là 1 hoặc 2 thì bạn đi xuống 1 tầng.
+# - Nếu mặt trên cho ra số chấm tròn từ 3 đến 5 thì bạn đi lên 1 tầng.
+# - Nếu mặt trên cho ra số chấm tròn là 6 thì bạn sẽ được tung xúc sắc lại 1 lần nữa, ra bao nhiêu số chấm tròn thì đi lên bấy nhiêu tầng cho lần đi đó.
+# Bạn được đi 100 lần. Chú ý:
+# - Vì 1 lý do gì đó, bạn có khả năng phải đi xuống tầng trệt để đi lại. Khả năng này 0.1%.
+# - Không có tầng âm, nghĩa là nếu rơi vào số chấm tròn là 1 hoặc 2 mà bạn đang ở tầng
+# trệt rồi thì bạn sẽ được ở tầng trệt cho lần đi đó.
+# - Giả định thêm: Xúc sắc bình thường. Bạn được chơi game này bao nhiêu lần tùy điều
+# kiện của bạn.
+# Tính xác suất thắng cuộc là bao nhiêu?
+
+# có biến là cái xúc xắc
+# for j = 0 loop range (100)
+# j là số lần tung xúc sắc 
+# tung xúc sắc ở đây, ra giá trị random từ 1 đến 6
+# i là số điểm. số điểm ban đầu là 0
+# nếu giá trị xúc sắc 1 -> 2 
+#   if i = 1 OR i = 2 => continue;
+#   else i = i - 1
+# nếu giá trị xúc sắc 3 -> 5 = i = i +1
+# nếu giá trị xúc sắc 6: roll again
+# if i === 60 || i > 60 => win. lấy j ra. tính j / 100 = bao nhiêu -> chính là tỉ lệ thắng cuộc
+
+#vì 1 lý do gì đó bạn phải xuống tầng trệt để đi lại ? thì lấy tỉ lệ thắng cuộc vừa tính trừ 0.1% ở đây 
+#bạn đc chơi game bao nhiêu lần tuỳ bạn ? => thế loop range ở đây là 100 hay như nào? 
